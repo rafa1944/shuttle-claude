@@ -2,6 +2,16 @@
 
 SSH connection manager for macOS that lives in your menu bar. Organize your servers by provider and project, then connect with a single click.
 
+## Screenshots
+
+| Menu Bar | Connections |
+|:---:|:---:|
+| ![Menu Bar](screenshots/menu.png) | ![Connections](screenshots/connections.png) |
+
+| Search | Settings |
+|:---:|:---:|
+| ![Search](screenshots/search.png) | ![Settings](screenshots/settings.png) |
+
 ## Features
 
 - **Menu bar app** — always accessible, no Dock icon
