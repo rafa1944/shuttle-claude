@@ -12,7 +12,7 @@ SSH connection manager for macOS that lives in your menu bar. Organize your serv
 - **Project URLs** — attach a URL to each project for quick reference
 - **Notes** — add free-text notes to any connection
 - **Launch at login** — optionally start the app when your Mac boots
-- **Configurable global hotkey** — open the search window from any app
+- **Configurable global hotkey** — open the search window from any app (default: Cmd+Shift+S)
 - **Keyboard navigation** — arrow keys and Enter to navigate and connect
 - **Export / Import** — export all data to JSON (sudo passwords encrypted with AES-GCM), import with replace or merge option
 - **Data persistence** — all data saved locally in JSON format
@@ -20,15 +20,15 @@ SSH connection manager for macOS that lives in your menu bar. Organize your serv
 ## Requirements
 
 - macOS 13.0 or later
-- Xcode 15.0 or later
+- [Xcode 15.0](https://developer.apple.com/xcode/) or later (required to build the project)
 
 ## Build
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/shuttle_claude.git
-cd shuttle_claude/ShuttleClaude
+git clone https://github.com/rafa1944/shuttle-claude.git
+cd shuttle-claude
 ```
 
 2. Resolve Swift Package dependencies:
@@ -59,7 +59,7 @@ Once running, the app appears as a terminal icon in the menu bar.
 
 1. Click the terminal icon in the menu bar
 2. Go to **Settings** (Cmd+,) to configure your preferred terminal
-3. In the **Connections** tab (Cmd+2), add your providers, projects, and connections
+3. Open **Connections** (Cmd+K) to add your providers, projects, and connections
 4. Click any connection in the menu to open an SSH session
 5. Use **Search** (Cmd+F from menu, or the global shortcut) to quickly find and connect
 
