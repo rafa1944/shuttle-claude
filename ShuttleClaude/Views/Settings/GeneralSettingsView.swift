@@ -72,6 +72,6 @@ struct GeneralSettingsView: View {
             }
         }
         .formStyle(.grouped)
-        .frame(minWidth: 400, minHeight: 300)
+        .frame(minWidth: 400, minHeight: 480)
     }
 }

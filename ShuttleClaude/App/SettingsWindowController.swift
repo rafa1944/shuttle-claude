@@ -29,21 +29,27 @@ final class SettingsWindowController {
 
         let settingsView = GeneralSettingsView()
             .environmentObject(store)
+            .frame(width: 450, height: 520)
 
         let hostingView = NSHostingView(rootView: settingsView)
-        hostingView.frame = NSRect(x: 0, y: 0, width: 450, height: 400)
 
         let window = EscapableWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 450, height: 400),
-            styleMask: [.titled, .closable, .resizable],
+            contentRect: NSRect(x: 0, y: 0, width: 450, height: 520),
+            styleMask: [.titled, .closable],
             backing: .buffered,
             defer: false
         )
         window.title = "Settings"
         window.contentView = hostingView
-        window.center()
         window.isReleasedWhenClosed = false
         window.makeKeyAndOrderFront(nil)
+        let screenFrame = NSScreen.main?.visibleFrame ?? .zero
+        let windowSize = NSSize(width: 450, height: 520)
+        let origin = NSPoint(
+            x: screenFrame.midX - windowSize.width / 2,
+            y: screenFrame.midY - windowSize.height / 2
+        )
+        window.setFrame(NSRect(origin: origin, size: windowSize), display: true)
 
         self.window = window
 
